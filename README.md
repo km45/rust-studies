@@ -7,7 +7,7 @@ Rustの勉強用リポジトリ
 docker コンテナ内で以下のようにする
 
 ```
-$ cd chapter01/02/
+$ cd projects/ch0102_hello_world/
 $ rustc main.rs
 $ ./main
 ```
