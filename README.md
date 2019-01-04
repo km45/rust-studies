@@ -2,7 +2,13 @@
 
 Rustの勉強用リポジトリ
 
-## rustcによるコンパイル
+## 資料
+
+https://doc.rust-jp.rs/book/second-edition/
+
+## メモ
+
+### rustcによるコンパイル
 
 docker コンテナ内で以下のようにする
 
@@ -12,7 +18,7 @@ $ rustc main.rs
 $ ./main
 ```
 
-## cargoによるコンパイル
+### cargoによるコンパイル
 
 docker コンテナ内で以下のようにする
 
