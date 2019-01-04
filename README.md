@@ -2,7 +2,7 @@
 
 Rustの勉強用リポジトリ
 
-## コンパイル方法
+## rustcによるコンパイル
 
 docker コンテナ内で以下のようにする
 
@@ -11,3 +11,18 @@ $ cd projects/ch0102_hello_world/
 $ rustc main.rs
 $ ./main
 ```
+
+## cargoによるコンパイル
+
+docker コンテナ内で以下のようにする
+
+```
+$ cd projects/ch0103_cargo
+$ cargo build
+$ ./target/debug/ch0103_cargo
+```
+
+その他に以下のコマンドも有用
+
+* cargo run
+* cargo check
