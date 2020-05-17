@@ -25,6 +25,11 @@ fn main() {
         // - compiler warn if not call `expect` (different from C++)
         .expect("Failed to read line");
 
+    // - convert String to u32
+    // - shadow guess
+    //   - use `guess` for u32 value though already exist `guess` for String
+    let guess: u32 = guess.trim().parse().expect("Please type a number!");
+
     // `println!` macro can treat placeholder `{}`
     println!("You guessed: {}", guess);
 }
