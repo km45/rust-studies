@@ -32,3 +32,4 @@ $ ./target/debug/ch0103_cargo
 
 * cargo run
 * cargo check
+* cargo doc
