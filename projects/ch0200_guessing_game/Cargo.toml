@@ -5,3 +5,4 @@ authors = ["Kamei Shogo"]
 edition = "2018"
 
 [dependencies]
+rand = "0.3.14"
