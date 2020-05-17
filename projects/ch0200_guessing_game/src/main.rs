@@ -32,4 +32,10 @@ fn main() {
 
     // `println!` macro can treat placeholder `{}`
     println!("You guessed: {}", guess);
+
+    match guess.cmp(&secret_number) {
+        std::cmp::Ordering::Less => println!("Too small"),
+        std::cmp::Ordering::Equal => println!("You Win!"),
+        std::cmp::Ordering::Greater => println!("Too big!"),
+    }
 }
