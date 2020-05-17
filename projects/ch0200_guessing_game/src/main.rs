@@ -29,7 +29,10 @@ fn main() {
         // - convert String to u32
         // - shadow guess
         //   - use `guess` for u32 value though already exist `guess` for String
-        let guess: u32 = guess.trim().parse().expect("Please type a number!");
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
 
         // `println!` macro can treat placeholder `{}`
         println!("You guessed: {}", guess);
