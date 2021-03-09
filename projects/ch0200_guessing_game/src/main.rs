@@ -1,6 +1,3 @@
-// MEMO: Is this requires?
-// extern crate rand;
-
 // MEMO: Why is this required?
 use rand::Rng;
 
@@ -8,7 +5,8 @@ fn main() {
     println!("Guess the number!");
 
     let secret_number = rand::thread_rng().gen_range(1, 101);
-    // println!("The secret number is: {}", secret_number); //for debugging
+
+    println!("The secret number is: {}", secret_number);
 
     loop {
         println!("Please input your guess.");
@@ -21,9 +19,9 @@ fn main() {
             // - `&` indicates "(immutable) reference" (implicitly immutable in Rust)
             // - `&mut` indicates "mutable reference"
             .read_line(&mut guess)
-            // - `read_line` returns `io::Result`, which is enum (Ok, Err)
-            // - `.expect` causes crash if `io::Result` equals `Err`.
-            // - compiler warn if not call `expect` (different from C++)
+            // - `read_line` returns `std::io::Result`, which is enum (Ok, Err)
+            // - `.expect` causes crash if `std::io::Result` equals `Err`.
+            // - compiler warn if not call `expect`
             .expect("Failed to read line");
 
         // - convert String to u32

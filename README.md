@@ -4,7 +4,7 @@ Rustの勉強用リポジトリ
 
 ## 資料
 
-https://doc.rust-jp.rs/book/second-edition/
+https://doc.rust-jp.rs/book-ja/
 
 ## メモ
 
