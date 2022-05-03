@@ -1,0 +1,9 @@
+[package]
+authors = []
+edition = "2018"
+name = "adder"
+version = "0.1.0"
+
+[dependencies]
+add-one = {path = "../add-one"}
+add-two = {path = "../add-two"}
