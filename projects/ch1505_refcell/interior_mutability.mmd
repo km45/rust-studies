@@ -1,0 +1,30 @@
+flowchart LR
+    %% let value = Rc::new(RefCell::new(5));
+    value === rc5_1[Rc] -- 1 --> refcell_5[RefCell] -.-> i32_5[5]
+
+    %% let a = Rc::new(Cons(Rc::clone(&value), Rc::new(Nil)));
+    subgraph cons_a [Cons]
+        rc5_2[Rc]
+        rc_nil[Rc]
+    end
+    rc5_2 -- 2 --> refcell_5
+    rc_nil -- 1 --> nil[Nil]
+    a[a] === rc_cons_a_1[Rc] -- 1 --> cons_a
+
+    %% let b = Cons(Rc::new(RefCell::new(6)), Rc::clone(&a));
+    subgraph cons_b [Cons]
+        rc_6[Rc]
+        rc_cons_a_2[Rc]
+    end
+    rc_6 -- 1 --> refcell_6[RefCell] -.-> i32_6[6]
+    rc_cons_a_2 -- 2 --> cons_a
+    b[b] === cons_b
+
+    %% let c = Cons(Rc::new(RefCell::new(10)), Rc::clone(&a));
+    subgraph cons_c [Cons]
+        rc_10[Rc]
+        rc_cons_a_3[Rc]
+    end
+    rc_10 -- 1 --> refcell_10[RefCell] -.-> i32_10[10]
+    rc_cons_a_3 -- 3 --> cons_a
+    c[c] === cons_c
